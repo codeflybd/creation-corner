@@ -4,187 +4,68 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style.css" />
+    <link href="./dist/style.css" rel="stylesheet" />
+    <script defer src="./node_modules/flowbite/dist/flowbite.js"></script>
+    <style>
+      .image-container .image-overlay {
+        top: 100%;
+      }
+      .image-container:hover .image-overlay {
+        top: 0;
+      }
+      .font {
+        font-family: "Lato", sans-serif;
+      }
+      .hover-effect {
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+      }
+      .hover-effect:hover {
+        background-color: #fa949d;
+      }
+    </style>
     <title>Creation Corner</title>
   </head>
-  <body>
+  <body class="bg-[#fafafa]">
     <!-- navbar -->
     <nav
-      class="border-gray-200 border px-2 sm:px-4 py-2.5 rounded sticky z-[100000] top-0 bg-gray-200"
-    >
-      <div
-        class="container flex flex-wrap items-center justify-between mx-auto"
-      >
-        <a href="https://flowbite.com/" class="flex items-center">
-          <img
-            src="/assets/images/hello.png"
-            class="h-6 mr-3 sm:h-9 rounded-full"
-            alt="Flowbite Logo"
-          />
-          <!-- <span
-          class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-          >Creation Corner </span
-        > -->
-        </a>
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-6 h-6"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white"
-          >
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white font-mono"
-                aria-current="page"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent font-mono"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent font-mono"
-                >Services</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent font-mono"
-                >Pricing</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent font-mono"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      class="border-gray-200 border px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 sticky z-[100000] top-0 bg-gray-200"
+      id="navbar"
+    ></nav>
 
     <!-- projects -->
     <main>
       <!-- About Section  -->
 
-      <section class="container mx-auto w-[90%]">
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center"
-        >
-          <div>
-            <h1 class="text-center text-3xl font-medium font-mono pb-2">
-              <span class="text-yellow-500">About!</span> <br />
-              Creation Corner
-            </h1>
-            <p class="text-justify font-mono">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat
-              saepe alias facere, iusto ipsum ab, voluptates eaque quam
-              exercitationem quo provident vitae error nisi facilis distinctio,
-              id praesentium iste in fugiat? Qui quae magni eum, corrupti in
-              doloribus consequuntur rerum nisi harum minima molestiae possimus
-              quisquam est ullam esse saepe veritatis iusto hic ex fugit. Dolore
-              dolorum ipsa tempore facere obcaecati id, no n eaque, illum
-              quaerat enim ad, nisi repellat! Quae magnam ea eos culpa.
-              Accusantium cumque repudiandae et laboriosam amet aspernatur
-              dignissimos, esse, vitae, doloremque eius quam labore debitis
-              architecto alias! sapiente aspernatur ex deleniti tenetur
-              perspiciatis. Quaerat, quod et!
-            </p>
-          </div>
-          <div class="pt-10">
-            <img src="./assets/images/about2.jpg" alt="" />
-          </div>
-        </div>
-
-        <!-- Why Choice us section -->
-
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center"
-        >
-          <div>
-            <img class="pt-10" src="./assets/images/why-choice.jpg" alt="" />
-          </div>
-          <div>
-            <h1
-              class="text-center text-3xl font-medium font-mono text-yellow-500 pb-2"
-            >
-              <span class="text-black">Why ? <br /> </span> Creation Corner !
-            </h1>
-            <p class="text-justify font-mono">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat
-              saepe alias facere, iusto ipsum ab, voluptates eaque quam
-              exercitationem quo provident vitae error nisi facilis distinctio,
-              id praesentium iste in fugiat? Qui quae magni eum, corrupti in
-              doloribus consequuntur rerum nisi harum minima molestiae possimus
-              quisquam est ullam esse saepe veritatis iusto hic ex fugit. Dolore
-              dolorum ipsa tempore facere obcaecati id, no n eaque, illum
-              quaerat enim ad, nisi repellat! Quae magnam ea eos culpa.
-              Accusantium cumque repudiandae et laboriosam amet aspernatur
-              dignissimos, esse, vitae, doloremque eius quam labore debitis
-              architecto alias! sapiente aspernatur ex deleniti tenetur
-              perspiciatis. Quaerat, quod et!
-            </p>
-          </div>
-        </div>
-      </section>
+      <section class="container mx-auto w-[90%]" id="about"></section>
 
       <!-- Our projects -->
-      <section class="my-5 container mx-auto max-w-7xl">
+      <section class="my-10 container mx-auto max-w-7xl">
         <h2 class="text-center text-4xl font-medium font-mono text-yellow-500">
           <span class="text-black">Our</span> Projects
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5" id="cards">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10" id="cards">
           <div
             class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
           >
             <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/alori/alori.png"
               alt=""
             />
             <div
@@ -192,12 +73,32 @@
             >
               <a
                 href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
               >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
+              </a>
+              <h3 class="text-2xl font-mono text-center text-white">Alori</h3>
+            </div>
+          </div>
+          <div
+            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
+          >
+            <img
+              class="w-full rounded-lg h-[550spx] object-cover"
+              src="./assets/images/projects-demo/basakhujo/basakhujo.png"
+              alt=""
+            />
+            <div
+              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
+            >
+              <a
+                href=""
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
+              >
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
               </a>
               <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
+                Basakhujo
               </h3>
             </div>
           </div>
@@ -205,8 +106,8 @@
             class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
           >
             <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/halpes/halpes.png"
               alt=""
             />
             <div
@@ -214,12 +115,92 @@
             >
               <a
                 href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
               >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
+              </a>
+              <h3 class="text-2xl font-mono text-center text-white">Halpes</h3>
+            </div>
+          </div>
+          <div
+            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
+          >
+            <img
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/krowd/krowd.png"
+              alt=""
+            />
+            <div
+              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
+            >
+              <a
+                href=""
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
+              >
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
+              </a>
+              <h3 class="text-2xl font-mono text-center text-white">Krowd</h3>
+            </div>
+          </div>
+          <div
+            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
+          >
+            <img
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/linoor/linoor.png"
+              alt=""
+            />
+            <div
+              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
+            >
+              <a
+                href=""
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
+              >
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
+              </a>
+              <h3 class="text-2xl font-mono text-center text-white">Linoor</h3>
+            </div>
+          </div>
+          <div
+            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
+          >
+            <img
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/lums/lums.png"
+              alt=""
+            />
+            <div
+              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
+            >
+              <a
+                href=""
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
+              >
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
+              </a>
+              <h3 class="text-2xl font-mono text-center text-white">Lums</h3>
+            </div>
+          </div>
+          <div
+            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
+          >
+            <img
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/memory-makers-photography/memory-makers-photography.png"
+              alt=""
+            />
+            <div
+              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
+            >
+              <a
+                href=""
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
+              >
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
               </a>
               <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
+                Memory Makers Photography
               </h3>
             </div>
           </div>
@@ -227,8 +208,8 @@
             class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
           >
             <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/mibooz/mibooz.png"
               alt=""
             />
             <div
@@ -236,12 +217,72 @@
             >
               <a
                 href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
               >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
+              </a>
+              <h3 class="text-2xl font-mono text-center text-white">Mibooz</h3>
+            </div>
+          </div>
+          <div
+            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
+          >
+            <img
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/nonid/nonid.png"
+              alt=""
+            />
+            <div
+              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
+            >
+              <a
+                href=""
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
+              >
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
+              </a>
+              <h3 class="text-2xl font-mono text-center text-white">Nonid</h3>
+            </div>
+          </div>
+          <div
+            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
+          >
+            <img
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/oslim/oslim.png"
+              alt=""
+            />
+            <div
+              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
+            >
+              <a
+                href=""
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
+              >
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
+              </a>
+              <h3 class="text-2xl font-mono text-center text-white">Oslim</h3>
+            </div>
+          </div>
+          <div
+            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
+          >
+            <img
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/programming-word/programming-word.png"
+              alt=""
+            />
+            <div
+              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
+            >
+              <a
+                href=""
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
+              >
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
               </a>
               <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
+                Programming Word App
               </h3>
             </div>
           </div>
@@ -249,8 +290,8 @@
             class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
           >
             <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/slando/slando.png"
               alt=""
             />
             <div
@@ -258,21 +299,19 @@
             >
               <a
                 href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
               >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
               </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
+              <h3 class="text-2xl font-mono text-center text-white">Slando</h3>
             </div>
           </div>
           <div
             class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
           >
             <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/tevily/tevily.png"
               alt=""
             />
             <div
@@ -280,21 +319,19 @@
             >
               <a
                 href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
               >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
               </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
+              <h3 class="text-2xl font-mono text-center text-white">Tevily</h3>
             </div>
           </div>
           <div
             class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
           >
             <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
+              class="w-full rounded-lg h-[550px] object-cover"
+              src="./assets/images/projects-demo/bebaha/bebaha.png"
               alt=""
             />
             <div
@@ -302,211 +339,11 @@
             >
               <a
                 href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
+                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-white ml-auto"
               >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
+                <i class="fa-solid fa-arrow-right text-lg text-white"></i>
               </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
-            </div>
-          </div>
-          <div
-            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
-          >
-            <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
-              alt=""
-            />
-            <div
-              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
-            >
-              <a
-                href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
-              >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
-              </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
-            </div>
-          </div>
-          <div
-            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
-          >
-            <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
-              alt=""
-            />
-            <div
-              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
-            >
-              <a
-                href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
-              >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
-              </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
-            </div>
-          </div>
-          <div
-            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
-          >
-            <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
-              alt=""
-            />
-            <div
-              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
-            >
-              <a
-                href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
-              >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
-              </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
-            </div>
-          </div>
-          <div
-            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
-          >
-            <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
-              alt=""
-            />
-            <div
-              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
-            >
-              <a
-                href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
-              >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
-              </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
-            </div>
-          </div>
-          <div
-            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
-          >
-            <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
-              alt=""
-            />
-            <div
-              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
-            >
-              <a
-                href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
-              >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
-              </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
-            </div>
-          </div>
-          <div
-            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
-          >
-            <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
-              alt=""
-            />
-            <div
-              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
-            >
-              <a
-                href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
-              >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
-              </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
-            </div>
-          </div>
-          <div
-            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
-          >
-            <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
-              alt=""
-            />
-            <div
-              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
-            >
-              <a
-                href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
-              >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
-              </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
-            </div>
-          </div>
-          <div
-            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
-          >
-            <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
-              alt=""
-            />
-            <div
-              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
-            >
-              <a
-                href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
-              >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
-              </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
-            </div>
-          </div>
-          <div
-            class="w-full relative rounded-lg hover:-translate-y-5 transition-transform duration-300 image-container overflow-hidden"
-          >
-            <img
-              class="w-full rounded-lg"
-              src="./assets/images/demo-13.jpg"
-              alt=""
-            />
-            <div
-              class="image-overlay absolute h-full w-full left-0 rounded-lg bg-[#ff2ab1c6] flex flex-col justify-between p-5 transition-top duration-300"
-            >
-              <a
-                href=""
-                class="h-14 w-14 flex items-center justify-center rounded-full border-2 border-black ml-auto"
-              >
-                <i class="fa-solid fa-arrow-right text-lg"></i>
-              </a>
-              <h3 class="text-2xl font-mono text-center text-white">
-                Projecct Name
-              </h3>
+              <h3 class="text-2xl font-mono text-center text-white">Bebaha</h3>
             </div>
           </div>
         </div>
@@ -684,6 +521,7 @@
         </li>
       </ul>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+
+    <script src="./index.js"></script>
   </body>
 </html>
